@@ -65,7 +65,7 @@ sudo mv wp-cli.phar wp
 
 cd /home/$user/web/$domain/public_html
 
-sudo -H -u$user /home/$user/wp core download
+sudo -H -u$user /home/$user/wp core download --locale=pt_BR
 sudo -H -u$user /home/$user/wp core config --dbname=$DBUSER --dbuser=$DBUSER --dbpass=$PASSWDDB
 
 password=$(LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | head -c 12)
